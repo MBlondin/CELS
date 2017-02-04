@@ -36,7 +36,12 @@
     <Compile Include="application\controllers\index.html" />
     <Compile Include="application\controllers\Welcome.php" />
     <Compile Include="application\core\index.html" />
+    <Compile Include="application\core\MY_Controller.php" />
+    <Compile Include="application\core\MY_Input.php" />
+    <Compile Include="application\core\MY_Model.php" />
     <Compile Include="application\helpers\index.html" />
+    <Compile Include="application\hooks\auth_constants.php" />
+    <Compile Include="application\hooks\auth_sess_check.php" />
     <Compile Include="application\hooks\index.html" />
     <Compile Include="application\language\english\index.html" />
     <Compile Include="application\language\index.html" />
@@ -364,6 +369,7 @@
     <Folder Include="system" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".htaccess" />
     <Content Include="README.md" />
   </ItemGroup>
 </Project>
