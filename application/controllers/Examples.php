@@ -8,7 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * @package     Community Auth
  * @author      Robert B Gottier
- * @copyright   Copyright (c) 2011 - 2016, Robert B Gottier. (http://brianswebdesign.com/)
+ * @copyright   Copyright (c) 2011 - 2017, Robert B Gottier. (http://brianswebdesign.com/)
  * @license     BSD - http://www.opensource.org/licenses/BSD-3-Clause
  * @link        http://community-auth.com
  */
@@ -192,10 +192,10 @@ class Examples extends MY_Controller
     {
         // Customize this array for your user
         $user_data = [
-            'username'   => 'skunkbot',
-            'passwd'     => 'PepeLePew7',
-            'email'      => 'skunkbot@example.com',
-            'auth_level' => '1', // 9 if you want to login @ examples/index.
+            'username'   => 'mblondin',
+            'passwd'     => 'MB4077al',
+            'email'      => 'mathieu_blondin@videotron.ca',
+            'auth_level' => '9', // 9 if you want to login @ examples/index.
         ];
 
         $this->is_logged_in();
@@ -203,8 +203,8 @@ class Examples extends MY_Controller
         echo $this->load->view('examples/page_header', '', TRUE);
 
         // Load resources
-        $this->load->model('examples_model');
-        $this->load->model('validation_callables');
+        $this->load->model('examples/examples_model');
+        $this->load->model('examples/validation_callables');
         $this->load->library('form_validation');
 
         $this->form_validation->set_data( $user_data );
@@ -325,7 +325,7 @@ class Examples extends MY_Controller
     public function recover()
     {
         // Load resources
-        $this->load->model('examples_model');
+        $this->load->model('examples/examples_model');
 
         /// If IP or posted email is on hold, display message
         if( $on_hold = $this->authentication->current_hold_status( TRUE ) )
@@ -422,7 +422,7 @@ class Examples extends MY_Controller
         else
         {
             // Load resources
-            $this->load->model('examples_model');
+            $this->load->model('examples/examples_model');
 
             if( 
                 /**

@@ -33,7 +33,9 @@
     <Compile Include="application\config\routes.php" />
     <Compile Include="application\config\smileys.php" />
     <Compile Include="application\config\user_agents.php" />
+    <Compile Include="application\controllers\Examples.php" />
     <Compile Include="application\controllers\index.html" />
+    <Compile Include="application\controllers\Key_creator.php" />
     <Compile Include="application\controllers\Welcome.php" />
     <Compile Include="application\core\index.html" />
     <Compile Include="application\core\MY_Controller.php" />
@@ -48,6 +50,7 @@
     <Compile Include="application\libraries\index.html" />
     <Compile Include="application\logs\index.html" />
     <Compile Include="application\models\index.html" />
+    <Compile Include="application\third_party\community_auth\config\examples\password_strength.php" />
     <Compile Include="application\third_party\community_auth\config\form_validation\login.php" />
     <Compile Include="application\third_party\community_auth\config\authentication.php" />
     <Compile Include="application\third_party\community_auth\config\db_tables.php" />
@@ -318,6 +321,7 @@
     <Folder Include="application\libraries" />
     <Folder Include="application\logs" />
     <Folder Include="application\models" />
+    <Folder Include="application\third_party\community_auth\config\examples\" />
     <Folder Include="application\third_party\community_auth\config\form_validation" />
     <Folder Include="application\third_party\community_auth\config" />
     <Folder Include="application\third_party\community_auth\controllers" />

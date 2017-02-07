@@ -5,7 +5,7 @@
 --
 -- @package     Community Auth
 -- @author      Robert B Gottier
--- @copyright   Copyright (c) 2011 - 2016, Robert B Gottier. (http://brianswebdesign.com/)
+-- @copyright   Copyright (c) 2011 - 2017, Robert B Gottier. (http://brianswebdesign.com/)
 -- @license     BSD - http://www.opensource.org/licenses/BSD-3-Clause
 -- @link        http://community-auth.com
 --
@@ -20,7 +20,7 @@
 -- ALTER TABLE ci_sessions ADD PRIMARY KEY (id, ip_address);
 
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `id` varchar(40) NOT NULL,
+  `id` varchar(128) NOT NULL,
   `ip_address` varchar(45) NOT NULL,
   `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
   `data` blob NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 CREATE TABLE IF NOT EXISTS `auth_sessions` (
-  `id` varchar(40) NOT NULL,
+  `id` varchar(128) NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `login_time` datetime DEFAULT NULL,
   `modified_at` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

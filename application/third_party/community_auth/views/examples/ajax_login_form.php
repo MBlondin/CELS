@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @package     Community Auth
  * @author      Robert B Gottier
- * @copyright   Copyright (c) 2011 - 2016, Robert B Gottier. (http://brianswebdesign.com/)
+ * @copyright   Copyright (c) 2011 - 2017, Robert B Gottier. (http://brianswebdesign.com/)
  * @license     BSD - http://www.opensource.org/licenses/BSD-3-Clause
  * @link        http://community-auth.com
  */
@@ -38,7 +38,10 @@ if( ! isset( $on_hold_message ) )
 			<br />
 
 			<label for="login_pass" class="form_label">Password</label>
-			<input type="password" name="login_pass" id="login_pass" class="form_input password" maxlength="<?php echo config_item('max_chars_for_password'); ?>" autocomplete="off" readonly="readonly" onfocus="this.removeAttribute('readonly');" />
+			<input type="password" name="login_pass" id="login_pass" class="form_input password" <?php 
+				if( config_item('max_chars_for_password') > 0 )
+					echo 'maxlength="' . config_item('max_chars_for_password') . '"'; 
+			?> autocomplete="off" readonly="readonly" onfocus="this.removeAttribute('readonly');" />
 
 
 			<?php

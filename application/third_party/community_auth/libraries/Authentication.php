@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @package     Community Auth
  * @author      Robert B Gottier
- * @copyright   Copyright (c) 2011 - 2016, Robert B Gottier. (http://brianswebdesign.com/)
+ * @copyright   Copyright (c) 2011 - 2017, Robert B Gottier. (http://brianswebdesign.com/)
  * @license     BSD - http://www.opensource.org/licenses/BSD-3-Clause
  * @link        http://community-auth.com
  */
@@ -244,7 +244,6 @@ class Authentication
 		 * Validate the posted username / email address and password.
 		 */
 		$this->CI->load->library('form_validation');
-		$this->CI->load->model('validation_callables');
 		$this->CI->config->load( config_item('login_form_validation_file') );
 		$this->CI->form_validation->set_rules( config_item('login_rules') );
 
@@ -691,7 +690,7 @@ class Authentication
 		$this->CI->session->set_userdata( 'auth_identifiers', $auth_identifiers );
 
 		// For security, force regenerate the session ID
-		$session_id = $this->CI->session->sess_regenerate( TRUE );
+		$session_id = $this->CI->session->sess_regenerate( config_item('sess_regenerate_destroy') );
 
 		// Update user record in database
 		$this->CI->{$this->auth_model}->login_update( 

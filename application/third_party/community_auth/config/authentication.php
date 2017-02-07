@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @package     Community Auth
  * @author      Robert B Gottier
- * @copyright   Copyright (c) 2011 - 2016, Robert B Gottier. (http://brianswebdesign.com/)
+ * @copyright   Copyright (c) 2011 - 2017, Robert B Gottier. (http://brianswebdesign.com/)
  * @license     BSD - http://www.opensource.org/licenses/BSD-3-Clause
  * @link        http://community-auth.com
  */
@@ -323,29 +323,6 @@ $config['redirect_to_https'] = FALSE;
 
 /*
 | -----------------------------------------------------------------
-|				MIN CHARS FOR PASSWORD						
-| -----------------------------------------------------------------
-| The lease amount of characters for a valid password
-*/
-
-$config['min_chars_for_password'] = 8;
-
-/*
-| -----------------------------------------------------------------
-|				MAX CHARS FOR PASSWORD						
-| -----------------------------------------------------------------
-| The maximum amount of characters for a valid password.
-| 
-| Because Community Auth uses CRYPT_BLOWFISH to hash passwords,
-| any password over 72 characters in length is truncated. You 
-| could certainly allow more characters, but only the first 
-| 72 characters are used for the resulting hash.
-*/
-
-$config['max_chars_for_password'] = 72;
-
-/*
-| -----------------------------------------------------------------
 |				LOGIN FORM VALIDATION FILE						
 | -----------------------------------------------------------------
 | The config file that handles the form validation for login attempts.
@@ -353,7 +330,7 @@ $config['max_chars_for_password'] = 72;
 | Make sure to remove any file extension, as this string is passed to config->load().
 */
 
-$config['login_form_validation_file'] = 'form_validation/login';
+$config['login_form_validation_file'] = 'form_validation/examples/login';
 
 /*
 | -----------------------------------------------------------------
