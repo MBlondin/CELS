@@ -72,6 +72,8 @@
     <Compile Include="application\third_party\community_auth\libraries\MY_Encryption.php" />
     <Compile Include="application\third_party\community_auth\libraries\Tokens.php" />
     <Compile Include="application\third_party\community_auth\models\Auth_model.php" />
+    <Compile Include="application\third_party\community_auth\models\examples\Examples_model.php" />
+    <Compile Include="application\third_party\community_auth\models\examples\Validation_callables.php" />
     <Compile Include="application\third_party\community_auth\models\Examples_model.php" />
     <Compile Include="application\third_party\community_auth\models\Validation_callables.php" />
     <Compile Include="application\third_party\community_auth\public_root\.htaccess" />
@@ -331,6 +333,7 @@
     <Folder Include="application\third_party\community_auth\libraries\Session" />
     <Folder Include="application\third_party\community_auth\libraries" />
     <Folder Include="application\third_party\community_auth\models" />
+    <Folder Include="application\third_party\community_auth\models\examples\" />
     <Folder Include="application\third_party\community_auth\public_root" />
     <Folder Include="application\third_party\community_auth\sh" />
     <Folder Include="application\third_party\community_auth\sql" />

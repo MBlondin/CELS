@@ -520,7 +520,7 @@ class Examples extends MY_Controller
                     $.ajax({
                         type: 'post',
                         cache: false,
-                        url: '/examples/ajax_attempt_login',
+                        url: '".site_url()."/examples/ajax_attempt_login',
                         data: {
                             'login_string': $('#login_string').val(),
                             'login_pass': $('#login_pass').val(),
